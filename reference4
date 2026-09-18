@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+void addFive(int& x) {
+    x += 5;
+}
+
+void swapValues(int& x, int& y) {
+    int temp = x;
+    x = y;
+    y = temp;
+}
+
+
+void changeValue(int x) {
+    x = 100;  
+}
+
+void changeRef(int& x) {
+    x = 200;   
+}
+
+
+int main() {
+    //1
+    int n = 7;
+    int& r = n;
+    r = 15;
+    cout << n << " " << r << endl;
+
+
+    //2
+    int a = 10;
+    addFive(a);
+    cout << a << endl;
+
+    //3
+    int a1 = 4, b1 = 9;
+    swapValues(a1, b1);
+    cout << a1 << " " << b1 << endl;
+
+    //4
+    int a2 = 5;
+    changeValue(a2);
+    cout << "After changeValue: " << a2 << endl;
+    changeRef(a2);
+    cout << "After changeRef: " << a2 << endl;
+
+
+
+
+    return 0;
+}
