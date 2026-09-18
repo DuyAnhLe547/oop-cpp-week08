@@ -1,0 +1,53 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+    string s1 ="hello";
+    string s2 = "c++";
+    cout << s1 << endl;
+    cout << s1 << endl;
+
+    string name;
+    cout << "Enter your name: ";
+    getline(cin, name);
+    cout << " hello " << name << "!" << endl;
+
+    string first = "hello";
+    string second = "world";
+    string message = first + " " + second +  "!";
+    cout << message << endl;
+
+    string s = " hello c++ ";
+    cout << "length: " << s.length() << endl;
+
+    string s = "Hello";
+    cout << "first character: " << s[0] << endl;
+    cout << "third character: " << s[2] << endl;
+
+    string text = "I love C++!";
+    size_t pos = text.find("C++");
+    if(pos != string::npos){
+        cout << "found at position: " << pos << endl;
+    }
+    else{
+        cout << "not found! " << endl;
+    }
+
+    string text = "Hello C++ world";
+    string part = text.substr(6, 3);
+    cout << part << endl;
+    
+    string s1 = "apple";
+    string s2 = "apple";
+    if(s1.compare(s2) == 0){
+        cout << "the strings are equal" << endl;
+    }
+    else{
+        cout << "the strings are different" << endl;
+    }
+
+    return 0;
+
+    
+}
