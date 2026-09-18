@@ -1,0 +1,76 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+    string fullname, studentID, email, hometown;
+    cout << "enter your full name: "; getline(cin, fullname);
+    cout << "enter your student ID: "; getline(cin, studentID);
+    cout << "enter your email: "; getline(cin, email);
+    cout << "enter your hometown: "; getline(cin, hometown);
+
+    cout << " student profile ";
+    cout << "full name: " << fullname << endl;
+    cout << "student ID: " << studentID << endl;
+    cout << "email: " << email << endl;
+    cout << "hometown: " << hometown << endl;
+    cout << "\n==================\n ";
+
+    string name;
+    cout << "Enter your name: ";
+    getline(cin, name);
+    cout << " Hello, " << name << "!" << endl;
+    cout << "Welcome to C++ programming " << endl;
+
+
+    string hoten;
+    cout << "Nhap ho ten: ";
+    getline(cin, hoten);
+    cout << "Initials: ";
+    cout << (char)toupper(hoten[0]) << ".";
+    for (int i = 1; i < hoten.length(); i++) {
+        if (hoten[i] == ' ' && i + 1 < hoten.length()) {
+            cout << (char)toupper(hoten[i + 1]) << ".";
+        }
+    }
+
+
+    string text;
+    string word;
+    cout << "Nhap text: ";
+    getline(cin, text);
+    cout << "Nhap word can tim: ";
+    getline(cin, word);
+    int viTri = text.find(word);
+    if (viTri != string::npos) {
+        cout << "The word \"" << word << "\" is found at position "
+             << viTri << "." << endl;
+    }
+    else {
+        cout << "The word \"" << word << "\" is not found." << endl;
+    }
+
+
+
+    string fullname;
+    int birthyear;
+    cout << "Nhap fullname: ";
+    getline(cin, fullname);
+    cout << "Nhap birthyear: ";
+    cin >> birthyear;
+    string username = "";
+    for (int i = 0; i < fullname.length(); i++) {
+        if (fullname[i] != ' ') {
+            username += tolower(fullname[i]);
+        }
+    }
+    username += to_string(birthyear);
+    cout << "Username: " << username << endl;
+
+    return 0;
+    
+}
+
+
+
+
