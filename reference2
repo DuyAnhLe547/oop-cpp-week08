@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+void swapvalue1(int&x, int&y){
+    int temp = x;
+    x = y;
+    y = temp;
+}
+
+void swapvalue2(int x, int y){
+    int temp = x;
+    x = y;
+    y = temp;
+}
+
+int main(){
+    int a = 5, b = 10;
+    cout << "before: a = " << a << ", b = " << b << endl;
+    swapvalue1(a, b);
+    cout << "before: a = " << a << ", b = " << b << endl;
+    // co thay doi gia tri a, b khi ra ngoai ham
+
+
+    cout << "before: a = " << a << ", b = " << b << endl;
+    swapvalue2(a, b);
+    cout << "before: a = " << a << ", b = " << b << endl;
+    // khong thay doi gia tri a, b khi ra ngoai ham
+}
