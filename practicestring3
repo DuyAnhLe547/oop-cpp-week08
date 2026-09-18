@@ -1,0 +1,56 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+    string s = " hello c++ ";
+    cout << s.length() << endl;
+    cout << s.size() << endl;
+
+    string s1 = "";
+    string s2 = "Hi";
+    cout << s1.empty() << endl;
+    cout << s2.empty() << endl;
+
+    string text = "I love C++!";
+    size_t pos = text.find("C++");
+    if(pos != string::npos){
+        cout << "found at position: " << pos << endl;
+    }
+    else{
+        cout << "not found! " << endl;
+    }
+
+    string s = "Hello World";
+    string part1 = s.substr(0, 5);
+    string part2 = s.substr(6, 5);
+
+    cout << part1 << endl;
+    cout << part2 << endl;
+
+    string s = "Hello";
+    s.append(" C++");
+    cout << s <<endl;
+
+    string s = "Hello World";
+    s.insert(5, ", C++");
+    cout << s << endl;
+
+    string s = "Hello World";
+    s.erase(5, 6);
+    cout << s << endl;
+
+    string s = "I like Java";
+    s.replace(7, 4, "C++");
+    cout << s << endl;
+
+    string s1 = "apple";
+    string s2 = "apple";
+    string s3 = "banana";
+    cout << s1.compare(s2) << endl; //0
+    cout << s1.compare(s3) << endl; // < 0
+    cout << s3.compare(s1) << endl; // > 0
+
+    return 0;
+
+}
