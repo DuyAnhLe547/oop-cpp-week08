@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+    string fullname, studentID, email, hometown;
+    cout << "enter your full name: "; getline(cin, fullname);
+    cout << "enter your student ID: "; getline(cin, studentID);
+    cout << "enter your email: "; getline(cin, email);
+    cout << "enter your hometown: "; getline(cin, hometown);
+
+    cout << " student profile ";
+    cout << "full name: " << fullname << endl;
+    cout << "student ID: " << studentID << endl;
+    cout << "email: " << email << endl;
+    cout << "hometown: " << hometown << endl;
+    cout << "\n==================\n ";
+
+    return 0;
+
+}
