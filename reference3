@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int a = 5;
+    int& r = a;
+    r = 10;
+    cout <<"a = " << a << endl;  // a = 10
+    cout <<"r = " << r << endl;  // r = 10
+    return 0;
+}
