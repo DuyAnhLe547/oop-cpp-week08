@@ -1,0 +1,88 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+void addExclaim(string& str) {
+    str += "!!!";
+}
+
+void swapStr(string& a, string& b) {
+    string temp = a;
+    a = b;
+    b = temp;
+}
+
+void changeFirstChar(string& str) {
+    str[0] = 'J';
+}
+
+
+void toUpperCase(string& str) {
+    for (char& c : str) {
+        c = toupper(c);
+    }
+}
+
+
+int main() {
+    //câu 1.
+    string s = "Hello";
+    string& r = s;       
+
+    r += "World";        
+
+    cout << s << endl;
+    cout << r << endl;
+    //output: HelloWorld
+    //        HelloWorld
+
+    //câu 2.
+    string msg = "Good Day";
+
+    addExclaim(msg);
+
+    cout << msg << endl;
+    //output: Good Day!!!
+
+    //câu 3.
+    string x = "cat";
+    string y = "dog";
+
+    swapStr(x, y);
+
+    cout << x << " " << y << endl;
+    //output: dog cat
+
+    //câu 4.
+    string name = "python";
+
+    changeFirstChar(name);
+
+    cout << name << endl;
+    //output: Jython
+
+    //câu 5.
+    string s = "Hello";
+    string r = s;        
+    string& ref = s;     
+
+    r += "!!!";          
+    ref += "???";        
+
+    cout << "s: " << s << endl;
+    cout << "r: " << r << endl;
+    cout << "ref: " << ref << endl;
+    //output: s: Hello???
+           // r: Hello!!!
+         // ref: Hello???
+
+    //câu 6.
+    string text = "c++ is fun";
+
+    toUpperCase(text);
+
+    cout << text << endl;
+    //output: C++ IS FUN
+
+    return 0;
+}
